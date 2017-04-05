@@ -1,0 +1,378 @@
+/*Animation KeyFrames*/
+@keyframes RightSide
+{
+    from 
+    {
+        margin-left: 50%;
+    }
+    to
+    {
+        margin-left: 0%;
+    }
+}
+
+@keyframes LeftSide
+{
+    from
+    {
+        margin-right: 0%;
+    }
+    to
+    {
+        margin-right: 50%;
+    }
+}
+
+/*links*/
+a
+{
+    text-decoration: none;
+    color: brown;
+}
+
+a:links
+{
+    text-decoration: none;
+}
+
+a:visited
+{
+    text-decoration: none;
+    color: brown;
+}
+
+a:hover
+{
+    text-decoration: none;
+    color: hotpink;
+}
+
+a:active
+{
+    text-decoration: none;
+    color: hotpink;
+}
+
+/*body*/
+body
+{  
+    background: white;
+    background-image: url("BackgroundImage.jpg"), linear-gradient(white, white, white, #ffe0bd);
+    background-size: cover;
+
+    font-family: "Lucida Console"; 
+}
+
+/*Quizzer logo transformation*/
+body header img:hover
+{
+    transform: rotateY(180deg);
+}
+
+/*headings in general*/
+h1 
+{
+    text-shadow: 1px 3px 5px;
+    color: black;
+
+    font-family: "Ravie","Lucida Console";    
+}
+
+/*the quiz table*/
+.Quizzes
+{
+    background-color: white;
+
+    border-width: 5px;
+    border-radius: 45px 45px 10px 0px;
+
+    box-shadow: 6px 12px 24px;
+    border-collapse: collapse;
+
+    animation: 
+    RightSide 4s infinite alternate,
+    LeftSide 4s infinite alternate;
+}
+
+/*"Choose a topic!" heading on Quiz table*/
+.QuizHeader
+{
+    color: #eccb7d;
+    text-shadow: none;
+}
+
+/*Image icons on Quiz table*/
+.Quizzes img:hover
+{
+    width: 300px;
+}
+
+.Quizzes:hover
+{
+    animation-play-state: paused;
+}
+
+/*dropdown menu*/
+.menuList
+{
+    list-style-type: none;
+    margin-top: 10px;
+    margin-right: 1329px;
+    -webkit-margin-end: 64.8%;
+    -moz-margin-end: 64.8%;
+    /*Altering margin-right makes
+    the navbar look smaller*/
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    opacity: 0.6;
+}
+
+/*list within menu*/
+.menuList li
+{
+    float: left;
+}
+
+/*links within menu list
+and the dropdown*/
+.menuList li a, .dropbtn
+{
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/*hover on the menulist and dropdown*/
+.menuList li a:hover, .dropdown:hover .dropdown
+{
+    background-color: red;
+}
+
+/*dropdown list itself*/
+li .dropdown
+{
+    display: inline-block;
+}
+
+/*dropdown stuff*/
+.dropdown-content
+{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/*links in the dropdown*/
+.dropdown-content a
+{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/*hovering links in the dropdown*/
+.dropdown-content a:hover
+{
+    background-color: #f1f1f1;
+}
+
+/*hovering the stuff in the dropdown*/
+.dropdown:hover .dropdown-content
+{
+    display: block;
+}
+
+/*Related Links page table*/
+#RelatedLinks
+{
+    background-color: white;
+    opacity: 0.7;
+}
+
+/*Setting multiple columns*/
+#FourColumns
+{
+    -webkit-column-count: 4; 
+    -moz-column-count: 4; 
+    column-count: 4;
+
+    -webkit-column-gap: 30px; 
+    -moz-column-gap: 30px; 
+    column-gap: 30px;
+
+    -webkit-column-rule-style: solid; 
+    -moz-column-rule-style: solid;
+    column-rule-style: solid;
+
+    -webkit-column-rule-width: 1px; 
+    -moz-column-rule-width: 1px;
+    column-rule-width: 1px;
+
+    -webkit-column-rule-color: lightblue; 
+    -moz-column-rule-color: lightblue;
+    column-rule-color: lightblue;
+
+    -webkit-column-width: 100px; 
+    -moz-column-width: 100px; 
+    column-width: 100px;
+}
+
+/*disclaimer*/
+#disclaimer
+{
+    height: 100px;
+    width: 140px;
+    background-color: white;
+    opacity: 0.5;
+    overflow: auto;
+    border: 8px solid hotpink;
+    padding: 2%;
+
+    color: red;
+    font-size: 20px;
+    font-family: times, verdana;
+
+    margin-top: 50px;
+}
+
+/*list-style*/
+.listStyle
+{
+    list-style-image: url('listStyle.png');
+}
+
+#mickeyMouse
+{
+    position: absolute;
+    height: 80px;
+    width: auto;
+    top: -35px;
+    margin-left: 47%;
+    -moz-margin-left: 47%;
+    -webkit-margin-left: 47%;
+    z-index: -1;
+}
+
+/*tooltip text*/
+.tooltip
+{
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip:hover .tooltiptext
+{
+    visibility: visible;
+}
+
+.tooltip .tooltiptext
+{
+    visibility: hidden;
+    width: 250px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 105%;
+
+}
+
+/*Footer*/
+.footer
+{
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+  opacity: 0.60;
+}
+
+#footerFix
+{
+   position: relative;
+   bottom: 0px;
+   margin-top: 250px;
+}
+
+#AboutUsFooterFix
+{
+   position: relative;
+   bottom: 0px;
+   margin-top: 75px;
+}
+
+/*images to be melted*/
+.top, .bottom
+{
+    height: 200px; 
+    width: 200px;
+    border: 2px solid hotpink;
+}
+
+/*Melting images*/
+#melting
+{
+    position: relative;
+    margin: 0 auto;
+}
+
+#melting img
+{
+    position: absolute;
+    left: 0;
+    -webkit-transition: opacity 4s ease-in-out;
+    transition: opacity 4s ease-in-out;
+    left: 50%;
+    margin-left: -100px;
+}
+
+/**/
+.top:hover
+{
+    opacity: 0;
+    cursor: crosshair;
+}
+
+#randomQuizTable
+{
+    color: red;
+    border: 2px solid black;
+    background-color: white;
+    opacity: 0.5;
+}
+
+#boldRandomQuizTable
+{
+    font-weight: bold;
+}
+
+#randomQuiz
+{
+    font-style: italic;
+}
+
+/*Timer Stopwatch Space*/
+#txt
+{
+    width: 40px;
+}
+
+.timerTextRight {
+    color: blue;
+}
+
+.timerTextWrong {
+    color: red;
+}

@@ -1,0 +1,81 @@
+﻿<!--Author: Ahmed B. Qureshi
+	Date: 1/30/2017-->
+
+	<!DOCTYPE html>
+	<html lang = "en">
+	<head>
+		<meta charset = "utf-8">
+		<title>Sign Up</title>
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<script src="script.js"></script>
+
+	</head>
+	<body>
+		<header>
+			<center><img src = "Quizzer.png" title = "Quizzer Logo" alt = "The logo for the Quizzer website."></center>
+			<!--INSERT LOGO-->
+		</header>
+		<!-- Top Navbar-->
+		<ul class="menuList" id = "menuListOthers">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			<li class="dropdown">
+				<a href="#" class="dropbtn">Account</a>
+				<div class="dropdown-content">
+					<a href="login.html">Login</a>
+					<a href="signup.html">Sign Up</a>
+				</div>
+			</li>
+			<li><a href="survey.html">Survey</a></li>
+			<li><a href= "relatedlinks.html">Related</a></li>
+		</ul>
+
+
+		<center><p>
+			<h2>Sign Up</h2>
+		</p>
+
+		<!--Signup Form-->
+		<form id="SignupForm" name="login" action="index.html" method="get">
+
+			<!--<label for="First Name" name="firstName" placeholder="First Name">First Name: </label>-->
+			<input id="FName" type="text" name="firstName" placeholder="First name" size = 40px required autofocus>
+			<br>
+			<!--<label for="Last Name" name="lastName" placeholder="Last Name">Last Name: </label>-->
+			<input id="LName" type="text" name="lastName" placeholder="Last name" size = 40px required>
+			<br>
+			<!--<label for="useremail">Email: </label>-->
+			<input type="email" name="useremail" placeholder="Example@email.com" onkeyup="localStorage.setItem('firstname', document.getElementById('email').innerHTML);" autofocus required id = "email" size = 40px>
+			<br>
+			<!--<label for="password1" name="password1" placeholder="password">Password: </label>-->
+			<input id="password1" type="password" name="password1" placeholder="Password" onkeyup="checkPass();" required size = 40px>
+			<br>
+			<!--<label for="password2" name="password2" placeholder="password2">Retype Password: </label>-->
+			<input id="password2" type="password" name="password2" placeholder="Retype your password" onkeyup="checkPass();" required size = 40px>
+			<br>
+			<input type="submit" id = "submit" onclick = "LoginSuccessful ()">
+			<input type="button" onclick="ResetDialog('SignupForm')" value="Reset form">
+			<center><p id="match"></p></center>
+			<p id="conditions">The password must be between 6 and 20 characters, contain one or more upper case letters, one or more lower case letters, a number and a special character. It can not contain any white space.</p>
+
+		</form>
+	</center>
+
+		<footer class="footer" id="footerFix">
+			<p>
+				<center><a href="index.html">Home</a>
+					<a href="relatedlinks.html">Related-Links</a>
+					<a href="aboutus.html">About-Us</a>
+					<a href="login.html">Login</a>
+					<a href="signup.html">Sign-Up</a>
+					<a href="survey.html">Survey</a>
+					<a href="naturequiz.html">Nature-Quiz</a>
+					<a href="culturequiz.html">Culture-Quiz</a>
+					<a href="sciencequiz.html">Science-Quiz</a>
+
+				</center>
+			</p>
+			<p><center>Ahmed B. Qureshi &copy;2017</center></p>
+		</footer>
+	</body>
+	</html>
