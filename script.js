@@ -375,3 +375,31 @@ function loadDocAnsQ4() {
     xhttp.open("GET", "Q4.txt", true);
     xhttp.send();
 }
+
+function displayXML(xml) {
+    var i;
+    var xmlDoc = xml.responseXML;
+    var table = "<tr><th>LEGEND</th></tr>";
+    var x = xmlDoc.getElementsByTagName("ENTITY");
+    for (i = 0; i < x.length; i++) {
+        table += "<tr><td>" +
+        x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
+        "</td></tr><tr><td>" +
+        x[i].getElementsByTagName("ORIGIN")[0].childNodes[0].nodeValue +
+        "</td></tr><tr><td>" +
+        x[i].getElementsByTagName("STORY")[0].childNodes[0].nodeValue +
+        "</td></tr><br><br>";
+    }
+    document.getElementById("ObjectInfo").innerHTML = table;
+}
+
+function loadXML() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                displayXML(this);
+            }
+        };
+        xhttp.open("GET", "objects.xml", true);
+        xhttp.send();
+    }

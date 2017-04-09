@@ -383,3 +383,7 @@ li .dropdown
     width: auto;
     border: 2px solid black;
 }
+
+#ObjectInfo{
+    border: 2px solid black;
+}
