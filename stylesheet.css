@@ -376,3 +376,10 @@ li .dropdown
 .timerTextWrong {
     color: red;
 }
+
+.QuestionImage {
+    position: relative;
+    height: 100px;
+    width: auto;
+    border: 2px solid black;
+}

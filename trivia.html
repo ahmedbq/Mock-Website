@@ -1,0 +1,78 @@
+﻿<!--Author: Ahmed B. Qureshi
+    Date: 1/30/2017-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Welcome to the Quiz Website!</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <center><a href="index.html"><img src="Quizzer.png" title="Quizzer Logo" alt="The logo for the Quizzer website."></a></center>
+        <img src="mickeyPeeking.png" title="Mickey Mouse" alt="Mickey Mouse peeking ontop of the logo" id="mickeyMouse">
+        <!--INSERT LOGO-->
+    </header>
+
+    <!-- Top Navbar-->
+
+    <ul class="menuList">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Account</a>
+            <div class="dropdown-content">
+                <a href="login.html">Login</a>
+                <a href="signup.html">Sign Up</a>
+            </div>
+        </li>
+        <li><a href="survey.html">Survey</a></li>
+        <li><a href="relatedlinks.html">Related</a></li>
+    </ul>
+
+    <h1>Trivia Page</h1>
+
+    <!--Question and Answer Image-->
+    <img id="Q1" class="QuestionImage" src="QuestionMark.jpg" alt="Trivia Question Logo"  onmouseover="loadDocAnsQ1();">
+    <img id="A1" class="QuestionImage" src="ExclamationMark.jpg" alt="Trivia Answer Logo"  onmouseover="loadDocAnsA1();">
+    <br><br>
+
+    <img class="QuestionImage" src="QuestionMark.jpg" alt="Trivia Question Logo" id="Q2" onmouseover="loadDocAnsQ2();">
+    <img class="QuestionImage" src="ExclamationMark.jpg" alt="Trivia Answer Logo" id="A2" onmouseover="loadDocAnsA2();">
+    <br><br>
+
+    <img class="QuestionImage" src="QuestionMark.jpg" alt="Trivia Question Logo" id="Q3" onmouseover="loadDocAnsQ3();">
+    <img class="QuestionImage" src="ExclamationMark.jpg" alt="Trivia Answer Logo" id="A3" onmouseover="loadDocAnsA3();">
+    <br><br>
+
+    <img class="QuestionImage" src="QuestionMark.jpg" alt="Trivia Question Logo" id="Q4" onmouseover="loadDocAnsQ4();">
+    <img class="QuestionImage" src="ExclamationMark.jpg" alt="Trivia Answer Logo" id="A4" onmouseover="loadDocAnsA4();">
+    <br><br>
+
+    <!--Answer-->
+    <div id="ans"></div>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>
+            <center>
+                <a href="index.html">Home</a>
+                <a href="relatedlinks.html">Related-Links</a>
+                <a href="aboutus.html">About-Us</a>
+                <a href="login.html">Login</a>
+                <a href="signup.html">Sign-Up</a>
+                <a href="survey.html">Survey</a>
+                <a href="naturequiz.html">Nature-Quiz</a>
+                <a href="culturequiz.html">Culture-Quiz</a>
+                <a href="sciencequiz.html">Science-Quiz</a>
+
+            </center>
+        </p>
+        <p><center>Ahmed B. Qureshi &copy;2017</center></p>
+    </footer>
+</body>
+</html>

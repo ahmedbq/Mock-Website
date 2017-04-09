@@ -222,3 +222,156 @@ function keepCountUpdated() {
 	document.getElementById("right").innerHTML = this.localStorage.getItem("correct");
 	document.getElementById("wrong").innerHTML = this.localStorage.getItem("incorrect");
 }
+
+/*AJAX*/
+function loadDocAnsA1() {
+    var xhttp;
+    if (window.XMLHttpRequest) {
+        // code for modern browsers
+        xhttp = new XMLHttpRequest();
+    } else {
+        // code for IE6, IE5
+        xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("ans").innerHTML = this.responseText;
+
+        }
+    };
+    xhttp.open("GET", "A1.txt", true);
+    xhttp.send();
+}
+
+function loadDocAnsA2() {
+    var xhttp;
+    if (window.XMLHttpRequest) {
+        // code for modern browsers
+        xhttp = new XMLHttpRequest();
+    } else {
+        // code for IE6, IE5
+        xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("ans").innerHTML = this.responseText;
+
+        }
+    };
+    xhttp.open("GET", "A2.txt", true);
+    xhttp.send();
+}
+
+function loadDocAnsA3() {
+    var xhttp;
+    if (window.XMLHttpRequest) {
+        // code for modern browsers
+        xhttp = new XMLHttpRequest();
+    } else {
+        // code for IE6, IE5
+        xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("ans").innerHTML = this.responseText;
+
+        }
+    };
+    xhttp.open("GET", "A3.txt", true);
+    xhttp.send();
+}
+
+function loadDocAnsA4() {
+    var xhttp;
+    if (window.XMLHttpRequest) {
+        // code for modern browsers
+        xhttp = new XMLHttpRequest();
+    } else {
+        // code for IE6, IE5
+        xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("ans").innerHTML = this.responseText;
+
+        }
+    };
+    xhttp.open("GET", "A4.txt", true);
+    xhttp.send();
+}
+
+function loadDocAnsQ1() {
+    var xhttp;
+    if (window.XMLHttpRequest) {
+        // code for modern browsers
+        xhttp = new XMLHttpRequest();
+    } else {
+        // code for IE6, IE5
+        xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("ans").innerHTML = this.responseText;
+
+        }
+    };
+    xhttp.open("GET", "Q1.txt", true);
+    xhttp.send();
+}
+
+function loadDocAnsQ2() {
+    var xhttp;
+    if (window.XMLHttpRequest) {
+        // code for modern browsers
+        xhttp = new XMLHttpRequest();
+    } else {
+        // code for IE6, IE5
+        xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("ans").innerHTML = this.responseText;
+
+        }
+    };
+    xhttp.open("GET", "Q2.txt", true);
+    xhttp.send();
+}
+
+function loadDocAnsQ3() {
+    var xhttp;
+    if (window.XMLHttpRequest) {
+        // code for modern browsers
+        xhttp = new XMLHttpRequest();
+    } else {
+        // code for IE6, IE5
+        xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("ans").innerHTML = this.responseText;
+
+        }
+    };
+    xhttp.open("GET", "Q3.txt", true);
+    xhttp.send();
+}
+
+function loadDocAnsQ4() {
+    var xhttp;
+    if (window.XMLHttpRequest) {
+        // code for modern browsers
+        xhttp = new XMLHttpRequest();
+    } else {
+        // code for IE6, IE5
+        xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("ans").innerHTML = this.responseText;
+
+        }
+    };
+    xhttp.open("GET", "Q4.txt", true);
+    xhttp.send();
+}
