@@ -118,8 +118,8 @@ h1
     list-style-type: none;
     margin-top: 10px;
     margin-right: 1329px;
-    -webkit-margin-end: 64.8%;
-    -moz-margin-end: 64.8%;
+    -webkit-margin-end: 55.9%;
+    -moz-margin-end: 55.9%;
     /*Altering margin-right makes
     the navbar look smaller*/
     padding: 0;
@@ -384,6 +384,8 @@ li .dropdown
     border: 2px solid black;
 }
 
-#ObjectInfo{
+#ObjectInfo {
     border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
 }

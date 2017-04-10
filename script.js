@@ -379,16 +379,21 @@ function loadDocAnsQ4() {
 function displayXML(xml) {
     var i;
     var xmlDoc = xml.responseXML;
-    var table = "<tr><th>LEGEND</th></tr>";
+    var table = "";
     var x = xmlDoc.getElementsByTagName("ENTITY");
+    var StringInput = document.getElementById("txt1").value;
     for (i = 0; i < x.length; i++) {
-        table += "<tr><td>" +
-        x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
-        "</td></tr><tr><td>" +
-        x[i].getElementsByTagName("ORIGIN")[0].childNodes[0].nodeValue +
-        "</td></tr><tr><td>" +
-        x[i].getElementsByTagName("STORY")[0].childNodes[0].nodeValue +
-        "</td></tr><br><br>";
+        if (x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue == StringInput) { /*will print only if input matches*/
+            table += "<tr><th>LEGEND</th></tr>";
+            table += "<tr><td><center><img src='"+  x[i].getElementsByTagName("PIC")[0].childNodes[0].nodeValue + "' height=300px width=auto/></center></td></tr>"
+            table += "<tr><td><center><strong>Name:</strong> " +
+            x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
+            "</td></tr></center><tr><td><center><strong>Origin:</strong> " +
+            x[i].getElementsByTagName("ORIGIN")[0].childNodes[0].nodeValue +
+            "</td></tr></center><tr><td><center><strong>Story:</strong><em> " +
+            x[i].getElementsByTagName("STORY")[0].childNodes[0].nodeValue +
+            "</em></td></tr></center><br><br>";
+        }
     }
     document.getElementById("ObjectInfo").innerHTML = table;
 }
