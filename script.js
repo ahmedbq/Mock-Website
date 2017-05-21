@@ -38,6 +38,7 @@ function ResetDialog(id) {
 	if (click === true)
 	{
 		document.getElementById(id).reset();
+		location.reload();
 	}
 }
 
@@ -114,10 +115,10 @@ function regex()
 
 function LoginSuccessful ()
 {
-	alert("Login successful!");
+	//alert("Login successful!");
 	//this.document.cookie = document.getElementById("email").innerHTML;
 	this.localStorage.setItem("firstname", document.getElementById("FName").value);
-	alert("Welcome " + this.localStorage.getItem("firstname"));
+	//alert("Welcome " + this.localStorage.getItem("firstname"));
 }
 
 function changeWelcome ()
@@ -185,6 +186,12 @@ function resetAll() {
 /*Remember that local storage */
 function correct() {
 	var nowANumber = parseInt(this.localStorage.getItem("correct"));
+	var quizANumber = parseInt(this.localStorage.getItem("QuizCorrect"));
+	
+	if(isNaN(quizANumber))
+	{
+		localStorage.setItem("QuizCorrect", "0");
+	}
 
 	/*initializes it only if it is null*/
 	if(isNaN(nowANumber))
@@ -195,13 +202,32 @@ function correct() {
 	nowANumber++;
 	this.localStorage.setItem("correct",nowANumber+"");
 	document.getElementById("right").innerHTML = this.localStorage.getItem("correct");
-
+	
+	quizANumber++;
+	this.localStorage.setItem("QuizCorrect",quizANumber+"");
+	
+	var tempCor = parseInt(this.localStorage.getItem("QuizCorrect"));
+	
+	/*document.write('<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js">
+	$(document).ready(function() {
+		$("#driver").click(function(event){
+	$.POST("SaveVariables.php", {QuizCorrect:tempCor});
+		});
+	});
+	</scr'+'ipt>');*/
+	
 	alert("Correct!");
 }
 
 function incorrect() {
 	var nowANumber = parseInt(this.localStorage.getItem("incorrect"));
-
+	var quizANumber = parseInt(this.localStorage.getItem("QuizWrong"));
+	
+	if(isNaN(quizANumber))
+	{
+		localStorage.setItem("QuizWrong", "0");
+	}
+	
 	if(isNaN(nowANumber))
 	{
 		localStorage.setItem("incorrect", "0");
@@ -210,8 +236,27 @@ function incorrect() {
 	nowANumber++;
 	this.localStorage.setItem("incorrect",nowANumber+"");
 	document.getElementById("wrong").innerHTML = this.localStorage.getItem("incorrect");
+	
+	quizANumber++;
+	this.localStorage.setItem("QuizWrong",quizANumber+"");
+	
+	var tempWro = parseInt(this.localStorage.getItem("QuizWrong"));
+	
+	/*document.write('\x3Cscript type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js">
+	$(document).ready(function() {
+		$("#driver").click(function(event){
+	$.POST("SaveVariables.php", {QuizWrong:tempWro});
+	});
+	});
+	\x3C/script>');*/
 
 	alert("Not Correct!");
+}
+
+function database()
+{
+	document.cookie = "correctCOOKIE=" + parseInt(localStorage.getItem("correct"));
+	document.cookie = "incorrectCOOKIE=" + parseInt(localStorage.getItem("incorrect"));
 }
 
 function keepCountUpdated() {
@@ -385,7 +430,7 @@ function displayXML(xml) {
     for (i = 0; i < x.length; i++) {
         if (x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue == StringInput) { /*will print only if input matches*/
             table += "<tr><th>LEGEND</th></tr>";
-            table += "<tr><td><center><img src='"+  x[i].getElementsByTagName("PIC")[0].childNodes[0].nodeValue + "' height=300px width=auto/></center></td></tr>"
+            table += "<tr><td><center><img src='" + x[i].getElementsByTagName("PIC")[0].childNodes[0].nodeValue + "' height=300px width=auto/></center></td></tr>";
             table += "<tr><td><center><strong>Name:</strong> " +
             x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
             "</td></tr></center><tr><td><center><strong>Origin:</strong> " +
